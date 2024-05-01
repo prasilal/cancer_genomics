@@ -12,8 +12,10 @@
 
 ### Alignment to the Human Reference Genome
 - Then I used BWA to align the raw sequencing reads from both tumor and normal samples to the human reference genome
-`bwa mem -t 8 hg19.fa tu.r1.fa tu.r2.fa > tu_aligned.sam`
-`bwa mem -t 8 hg19.fa wt.r1.fa wt.r2.fa > wt_aligned.sam`
+```
+bwa mem -t 8 hg19.fa tu.r1.fa tu.r2.fa > tu_aligned.sam
+bwa mem -t 8 hg19.fa wt.r1.fa wt.r2.fa > wt_aligned.sam
+```
 
 ### Coverting SAM to BAM
 `samtools view -S -b tu_aligned.sam > tu_aligned.bam`
